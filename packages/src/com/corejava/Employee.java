@@ -1,5 +1,6 @@
 package com.corejava;
 
+import javax.print.attribute.standard.MediaSize;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -25,6 +26,12 @@ public class Employee extends Person{
     {
         this.id = nextID;
         nextID++;
+    }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        Employee other = (Employee) otherObject;
+        return this.name == other.getName();
     }
 
     public int getId(){ return id; }

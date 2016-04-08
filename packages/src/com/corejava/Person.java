@@ -3,7 +3,7 @@ package com.corejava;
 /**
  * Created by mavis on 4/8/16.
  */
-abstract class Person {
+abstract public class Person {
     private String name;
     public Person(String name)
     {
@@ -11,6 +11,8 @@ abstract class Person {
     }
 
     abstract public void getDescription();
+
+//    abstract public boolean equals(Object otherObject); //Unable to write equal method
 
     public String getName(){ return name; }
 }
