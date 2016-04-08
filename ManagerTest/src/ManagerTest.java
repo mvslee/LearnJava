@@ -12,6 +12,11 @@ public class ManagerTest {
         staff[1] = new Employee("Mike", 6000, 2005, 4, 10);
         staff[2] = new Employee("Jack", 5000, 2011, 5, 12);
         for (Employee e:staff)
-            System.out.println(e.getName() + " " + e.getSalary() + " hired in " +e.getHireday());
+        {
+            e.setId();
+            System.out.println(e.getId() + " " +e.getName() + " " + e.getSalary());
+            e.getDescription();
+        }
+
     }
 }
