@@ -1,22 +1,28 @@
 import com.corejava.*;
 
+import java.util.*;
+
 /**
  * Created by mavis on 4/7/16.
  */
 public class ManagerTest {
-    public static void main(String[] args){
-        Employee[] staff = new Employee[3];
-        Manager boss = new Manager("Carl", 8000, 2000, 3, 12);
+    public static void main(String[] args) throws CloneNotSupportedException {
+        ArrayList<Employee> staff = new ArrayList<Employee>();
+        Manager boss = new Manager("Carl", 6000, 2000, 12, 2);
         boss.setBonus(2000);
-        staff[0] = boss;
-        staff[1] = new Employee("Mike", 6000, 2005, 4, 10);
-        staff[2] = new Employee("Jack", 5000, 2011, 5, 12);
-        for (Employee e:staff)
+        staff.add(boss);
+        staff.add(new Employee("Mike", 6000, 2004, 4, 5));
+        staff.add(new Employee("Jhon", 7500, 2010, 5,19));
+        Employee stafflist[] = new Employee[staff.size()];
+        stafflist[0] = staff.get(0).clone();
+        stafflist[1] = staff.get(1).clone();
+        stafflist[2] = staff.get(2).clone();
+        Arrays.sort(stafflist);
+        for (Employee e:stafflist)
         {
-            e.setId();
             System.out.println(e.getId() + " " +e.getName() + " " + e.getSalary());
-            e.getDescription();
+            System.out.println(e.toString());
+            System.out.println(e.hashCode());
         }
-
     }
 }
