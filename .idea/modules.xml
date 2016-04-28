@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ManagerTest/ManagerTest.iml" filepath="$PROJECT_DIR$/ManagerTest/ManagerTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PairTest/PairTest.iml" filepath="$PROJECT_DIR$/PairTest/PairTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" filepath="$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SetTest/SetTest.iml" filepath="$PROJECT_DIR$/SetTest/SetTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleFrame/SimpleFrame.iml" filepath="$PROJECT_DIR$/SimpleFrame/SimpleFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimeListen/TimeListen.iml" filepath="$PROJECT_DIR$/TimeListen/TimeListen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TreeSet/TreeSet.iml" filepath="$PROJECT_DIR$/TreeSet/TreeSet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/packages.iml" filepath="$PROJECT_DIR$/packages/packages.iml" />
+    </modules>
+  </component>
+</project>

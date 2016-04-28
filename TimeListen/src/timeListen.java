@@ -12,18 +12,37 @@ public class timeListen
 {
     public static void main(String[] args)
     {
-        ActionListener  listener= new TimerPrinter();
-        Timer t = new Timer(10000, listener);
-        t.start();
-        JOptionPane.showMessageDialog(null, "Quit Program?");
+        TalkingClock clock = new TalkingClock(1000, true);
+        clock.start();
+        ActionListener listener = clock.new TimerPrinter();
+        JOptionPane.showMessageDialog(null, "Quit?");
         System.exit(0);
     }
 }
-class TimerPrinter implements ActionListener
+
+class TalkingClock
 {
-    public void actionPerformed(ActionEvent e) {
-        Date now = new Date();
-        System.out.println("At the tone, time is " + now);
-        Toolkit.getDefaultToolkit().beep();
+    private int interval;
+    private boolean beep;
+
+    public TalkingClock(int interval, boolean beep)
+    {
+        this.interval = interval;
+        this.beep = beep;
+    }
+
+    public void start()
+    {
+        ActionListener listener = this.new TimerPrinter();
+        Timer t = new Timer(interval, listener);
+        t.start();
+    }
+    public class TimerPrinter implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e) {
+            Date now = new Date();
+            System.out.println("At the tone, time is " + now);
+            if(TalkingClock.this.beep) Toolkit.getDefaultToolkit().beep();
+        }
     }
 }
